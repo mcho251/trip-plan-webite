@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Simple Website</title>
+  <title>Japan & Korea Trip</title>
   <link rel="stylesheet" href="style.css">
   <style>
   </style>
@@ -11,16 +11,99 @@
 <body>
 
   <header>
-    <h1>Welcome to My Website</h1>
+    <h1>Japan & Korea Trip</h1>
   </header>
 
-  <main>
-    <p>This is a simple page using just HTML, CSS, and JavaScript — no frameworks needed.</p>
+  <article>
+    <div class="card" id="next-flight-card">
+      <div class="card-content">
+        <h2 class="card-title">✈️ Next Flight</h2>
+        <div class="flight-row">
+          <span class="flight-label">Airline</span>
+          <span class="flight-value" id="flight-airline"></span>
+        </div>
+        <div class="flight-row">
+          <span class="flight-label">Flight</span>
+          <span class="flight-value" id="flight-num"></span>
+        </div>
+        <div class="flight-row">
+          <span class="flight-label">Route</span>
+          <span class="flight-value" id="flight-route"></span>
+        </div>
+        <div class="flight-row hidden" id="layover-row">
+          <span class="flight-label">Layover</span>
+          <span class="flight-value" id="flight-layover"></span>
+        </div>
+        <div class="flight-row">
+          <span class="flight-label">Departure</span>
+          <span class="flight-value" id="flight-time"></span>
+        </div>
+      </div>
 
-    <button onclick="sayHello()">Click Me</button>
-    <p id="message"></p>
-  </main>
+      <div class="layover-card-content hidden">
+        <h3 class="card-title">Layover</h3>
+        <div class="flight-row">
+          <span class="flight-label">Airline</span>
+          <span class="flight-value" id="flight-airline"></span>
+        </div>
+        <div class="flight-row">
+          <span class="flight-label">Flight</span>
+          <span class="flight-value" id="layover-num"></span>
+        </div>
+        <div class="flight-row">
+          <span class="flight-label">Route</span>
+          <span class="flight-value" id="layover-route"></span>
+        </div>
+        <div class="flight-row">
+          <span class="flight-label">Departure</span>
+          <span class="flight-value" id="layover-time"></span>
+        </div>
+      </div>
+    </div>
+  </article>
 
+  <section class="card-container">
+
+    <div class="card featured hidden" id="featured-city">
+      <a href="#" class="card-link" id="featured-link">
+        <span class="featured-badge">📍 You May Be in This City Right Now</span>
+        <img class="card-media" id="featured-image" src="" alt="Current city">
+        <div class="card-content">
+          <h2 class="card-title" id="featured-title"></h2>
+          <p class="card-text" id="featured-text"></p>
+        </div>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="japan.html" class="card-link">
+      <img class="card-media" src = "source/japan.png" alt="Japan Flag">
+      <div class="card-content">
+        <h2 class="card-title">Japan</h2>
+        <p class="card-text">Date</p>
+      </div>
+      </a>
+      <div class="card-actions">
+        <button class="card-button">ACTION 1</button>
+        <button class="card-button">ACTION 2</button>
+      </div>
+    </div>
+ 
+    <div class="card">
+      <img class="card-media" src = "source/south_korea.png" alt="Korea Flag">
+      <div class="card-content">
+        <h2 class="card-title">Korea</h2>
+        <p class="card-text">Date</p>
+      </div>
+      <div class="card-actions">
+        <button class="card-button">LEARN MORE</button>
+      </div>
+    </div>
+ 
+  </section>
+
+  
+  <script src="trip-data.js"></script>
   <script src="script.js"></script>
 
 </body>
