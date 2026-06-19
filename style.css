@@ -159,6 +159,14 @@ button:hover {
   background: #f0f0f0;
 }
 
+.card-container hr {
+  grid-column: 1 / -1; /* Forces the line to span across all grid columns */
+  width: 100%;        /* Makes sure it stretches completely */
+  border: 0;
+  border-top: 2px solid #948c8c; /* Gives it a clean, subtle look */
+  margin: 20px 0;     /* Gives it some breathing room */
+}
+
 .card-link {
   display: block;
   color: inherit;

@@ -18,21 +18,14 @@
     <div class="card" id="next-flight-card">
       <div class="card-content">
         <h2 class="card-title">✈️ Next Flight</h2>
-        <div class="flight-row">
-          <span class="flight-label">Airline</span>
-          <span class="flight-value" id="flight-airline"></span>
-        </div>
-        <div class="flight-row">
-          <span class="flight-label">Flight</span>
-          <span class="flight-value" id="flight-num"></span>
-        </div>
-        <div class="flight-row">
+         <span class="connecting-badge hidden" id="connecting-badge">🔄 Connecting Flight</span>
+         <div class="flight-row">
           <span class="flight-label">Route</span>
           <span class="flight-value" id="flight-route"></span>
         </div>
-        <div class="flight-row hidden" id="layover-row">
-          <span class="flight-label">Layover</span>
-          <span class="flight-value" id="flight-layover"></span>
+        <div class="flight-row">
+          <span class="flight-label">Airline | Flight</span>
+          <span class="flight-value" id="flight-airline"></span>
         </div>
         <div class="flight-row">
           <span class="flight-label">Departure</span>
@@ -40,19 +33,15 @@
         </div>
       </div>
 
-      <div class="layover-card-content hidden">
+      <div class="card-content hidden" id="layover-card">
         <h3 class="card-title">Layover</h3>
         <div class="flight-row">
-          <span class="flight-label">Airline</span>
-          <span class="flight-value" id="flight-airline"></span>
-        </div>
-        <div class="flight-row">
-          <span class="flight-label">Flight</span>
-          <span class="flight-value" id="layover-num"></span>
-        </div>
-        <div class="flight-row">
-          <span class="flight-label">Route</span>
+          <span class="flight-label">@</span>
           <span class="flight-value" id="layover-route"></span>
+        </div>
+        <div class="flight-row">
+          <span class="flight-label">Airline | Flight</span>
+          <span class="flight-value" id="layover-airline"></span>
         </div>
         <div class="flight-row">
           <span class="flight-label">Departure</span>
@@ -74,6 +63,8 @@
         </div>
       </a>
     </div>
+
+    <hr class="section-divider">
 
     <div class="card">
       <a href="japan.html" class="card-link">

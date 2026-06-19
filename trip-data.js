@@ -77,10 +77,15 @@ const flights = [
   {
     id: "nz-tokyo",
     airline: "Qantas",
-    flightNumber: "NZ99",
+    flightNumber: "QF120",
     from: "Auckland (AKL)",
     to: "Tokyo (Narita)",
-    departure: "2026-07-02T17:35:00"
+    departure: "2026-06-30T06:10:00",
+    layover: {
+      airport: "Brisbane (AUS)",
+      departure: "2026-06-30T10:30:00",
+      flightNumber: "QF61"
+  }
   },
   {
     id: "osaka-seoul",
@@ -88,23 +93,20 @@ const flights = [
     flightNumber: "MM709",
     from: "Osaka (Kansai)",
     to: "Seoul (Incheon)",
-    departure: "2026-07-10T09:05:00"
+    departure: "2026-07-10T18:15:00"
   },
   {
-    id: "osaka-seoul",
-    airline: "Korean Air",
-    flightNumber: "KE726",
-    from: "Osaka (KIX)",
-    to: "Seoul (ICN)",
-    departure: "2026-07-08T11:20:00"
-  },
-  {
-    id: "return",
-    airline: "Qantas",
-    flightNumber: "NZ100",
+    id: "seoul-nz",
+    airline: "Cathay Pacific",
+    flightNumber: "CX439",
     from: "Seoul (ICN)",
     to: "Auckland (AKL)",
-    departure: "2026-07-10T20:00:00"
+    departure: "2026-07-16T13:40:00",
+    layover: {
+      airport: "Hong Kong",
+      departure: "2026-07-16T21:05:00",
+      flightNumber: "CX113"
+  }
   }
 ];
  

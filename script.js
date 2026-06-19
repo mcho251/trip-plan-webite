@@ -1,7 +1,7 @@
 function renderNextFlight() {
   const next = getNextFlight();
   const badge = document.getElementById("connecting-badge");
-  const layoverRow = document.getElementById("layover-row");
+  const layoverCard = document.getElementById("layover-card");
  
   if (!next) {
     document.getElementById("flight-airline").textContent = "—";
@@ -13,17 +13,17 @@ function renderNextFlight() {
     return;
   }
  
-  document.getElementById("flight-airline").textContent = next.airline;
-  document.getElementById("flight-num").textContent = next.flightNumber;
+  document.getElementById("flight-airline").textContent = `${next.airline} | ${next.flightNumber}`;
   document.getElementById("flight-route").textContent = `${next.from} → ${next.to}`;
   document.getElementById("flight-time").textContent = formatFlightDeparture(next.departure);
  
   // Only show the badge + layover row if this particular flight has one
   if (next.layover) {
-    badge.classList.remove("hidden");
-    layoverRow.classList.remove("hidden");
-    document.getElementById("flight-layover").textContent =
-      `${next.layover.duration} in ${next.layover.airport}`;
+    if(badge) badge.classList.remove("hidden");
+    if(layoverCard) layoverCard.classList.remove("hidden");
+    document.getElementById("layover-airline").textContent = `${next.airline} | ${next.layover.flightNumber}`;
+    document.getElementById("layover-route").textContent = next.layover.airport;
+    document.getElementById("layover-time").textContent = formatFlightDeparture(next.layover.departure);
   } else {
     badge.classList.add("hidden");
     layoverRow.classList.add("hidden");
